@@ -1,10 +1,10 @@
 # A-Vocabulary.com-Vocab-List-TO-Anki-Deck-Converter
 
-##What is this
+## What is this
 
 This is a a console program which i wrote in python. It can automatically create deck based on any list in vocabulary.com. I made this with the purpose to use it with the vocabgarbber in vocabulary.com. It's a powerful feature that grabs hard vocab from whatever text you enter. I use it to learn every word i dont know before i read something hard and i found it works pretty good for me in terms of increasing the amount i read and retaining the vocab in my head.
 
-##How to use it
+## How to use it
 
 1. You need to login to a vocabulary.com account (free to sign up)
 2. (OPTIONAL) Grab vocab using the <a href="https://www.vocabulary.com/lists/vocabgrabber">vocabgarbber</a> and click create list
@@ -13,12 +13,13 @@ This is a a console program which i wrote in python. It can automatically create
 4. run run.exe, when it asks you to enter the url, paste the url and then hit enter.
 5. If the program run successfully, you shouldn't get any error message. The program will close it self when it's finished. Then you will find a loadable anki package. Double click it to load the deck like you normally do.
 
-##Things you should know
+## Things you should know
 1. You need to manually change the template and deck name
 2. Sometimes if the list have more than 100 words, it can only load the first 100 words, i dont know how to solve this yet...
 
-##How does this work
+## How does this work
 
 This programm is fairly simple: first it scrap the word, definition and example from the url you entered, and put it into a 2 by 3 list. then it feeds the list to genanki. that's it. 
 
+Any question or comments are welcome
 Good luck!
