@@ -21,5 +21,9 @@ This is a a console program which i wrote in python. It can automatically create
 
 This programm is fairly simple: first it scrap the word, definition and example from the url you entered, and put it into a 2 by 3 list. then it feeds the list to genanki. that's it. 
 
+
+
+
 Any question or comments are welcome
+
 Good luck!
