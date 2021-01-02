@@ -1,4 +1,11 @@
 # A-Vocabulary.com-Vocab-List-TO-Anki-Deck-Converter
+# Attention This is a Fork!
+I changed some indices to make the script realise where the words start and end. I don't have an Executeable yet because there are still some bugs (see the list below). I will work on this in February after my exams.
+# What I want to change.
+1. There is a bug that cut's the example sentence at the word in focus (I think there is no point of using this yet, unless someone wants to be annoyed by his/her flashcards)
+2. I want more beautiful Flashcards
+3. Updating this README
+4. Create a executable .exe
 
 ## What is this
 
