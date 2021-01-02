@@ -1,6 +1,8 @@
 # A-Vocabulary.com-Vocab-List-TO-Anki-Deck-Converter
 # Attention This is a Fork!
-I changed some indices to make the script realise where the words start and end. I don't have an Executeable yet because there are still some bugs (see the list below). I will work on this in February after my exams.
+I changed some indices to make the script realise where the words start and end. I don't have an Executeable yet because there are still some bugs (see the list below).
+The original creater mentioned that he could not create decks bigger then around 80 cards. I tried this fix with "The Vocabluary.com Top 100" (https://www.vocabulary.com/lists/52473) and it worked just fine.
+
 ## What I want to change.
 1. There is a bug that cut's the example sentence at the word in focus (I think there is no point of using this yet, unless someone wants to be annoyed by his/her flashcards)
 2. I want more beautiful Flashcards
