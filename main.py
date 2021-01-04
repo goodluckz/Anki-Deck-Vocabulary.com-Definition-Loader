@@ -4,16 +4,21 @@ import genanki
 import re
 
 again = True
+txt = "Welcome, to create an Anki Vocabulary deck please select a deck from vocabulary.com"\
+      "\nGo to the page that contains the vocab list and copy the URL of that page."\
+    "\nIt should look like this http://vocabulary.com/lists/236361"
+print(txt)
 
 while again:
     isGoodUrl = False
     while not isGoodUrl:
-        url = input("input list url: ")
+        url = input("Input list URL: ")
         # url = "http://vocabulary.com/lists/236361"  # fixed url for testing
         pattern = re.compile('(https?://)?(www\\.)?vocabulary\\.com/lists/\\d{4,8}')
         match = re.match(pattern, url)
         boolean = bool(match)
-        print(boolean)
+        if boolean:
+            print("Is valid URL")
         isGoodUrl = boolean
 
     if not 'http' in url:
@@ -22,6 +27,7 @@ while again:
     response = requests.get(url)
     print(response)
     if response.status_code == 200:
+        print("Processing Wordlist!")
         words = []
         soup = bs4.BeautifulSoup(response.text, "html.parser")
         title = soup.select('title')[0].text
@@ -74,5 +80,7 @@ while again:
     answer = input("Do you want to create another deck? y/n ").lower()
     if answer != "y" and answer != "yes":
         again = False
+
+    print("\n\n###########################\n\n")
 
 
