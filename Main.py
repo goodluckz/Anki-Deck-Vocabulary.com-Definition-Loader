@@ -1,12 +1,10 @@
 import requests
-import urllib.request
-import time
 import bs4
 import genanki
 
 
 url = input("input list url: ")
-
+# url = " http://vocabulary.com/lists/236361"  # fixed url for testing
 
 response = requests.get(url)
 print(response)
@@ -15,16 +13,14 @@ soup = bs4.BeautifulSoup(response.text, "html.parser")
 for i, li in enumerate(soup.select('li')):
     words.append(li.text)
 
-words = words[21:]
+lastIndex = words.index('Play the Challenge')
+words = words[21: lastIndex]
 length = len(words)
 list = [['','',''] for i in range(length)]
 for i in range(length):
-    if words[i] == "Play the Challenge":
-      print("The list constains " + str(i) + " Words")
-      break
     print(str(i + 1), words[i])
     list[i][0:2] = words[i].split('\n')[1:3]
-    list[i][2] = ''.join(words[i].split('\n')[3:5])
+    list[i][2] = ''.join(words[i].split('\n')[4:6])
 
 
 
