@@ -6,14 +6,15 @@ import re
 isGoodUrl = False
 while not isGoodUrl:
     url = input("input list url: ")
-    url = "http://vocabulary.com/lists/236361"  # fixed url for testing
-    pattern = re.compile('http://vocabulary\\.com/lists/\\d{6}')
+    # url = "http://vocabulary.com/lists/236361"  # fixed url for testing
+    pattern = re.compile('(http://)?vocabulary\\.com/lists/\\d{6}')
     match = re.match(pattern, url)
     boolean = bool(match)
     print(boolean)
     isGoodUrl = boolean
 
-
+if not 'http' in url:
+    url = 'http://' + url
 
 response = requests.get(url)
 print(response)
