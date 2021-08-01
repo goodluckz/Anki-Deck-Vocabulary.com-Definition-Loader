@@ -70,7 +70,7 @@ while again:
         for pack in word_list:
             word, definition, sentence = pack
             syn, ant, pos, trans, pic = "", "", "", "", ""
-            source = ""
+            source = title
             audio = ""
             my_deck.add_note(genanki.Note(
                 model=my_model,
