@@ -24,6 +24,7 @@ This is a a console program which i wrote in python. It can automatically create
 <a href="https://icons8.com/icon/54640/dictionary">Green Dictionary icon by Icons8</a><br/>
 <img src="https://img.icons8.com/wired/64/4a90e2/dictionary.png"/>
 <a href="https://icons8.com/icon/54640/dictionary">Blue Dictionary icon by Icons8</a><br/>
+<a href="https://icons8.com/icon/74155/swap">Swap icon by Icons8</a>
 
 ## How does this work
 
