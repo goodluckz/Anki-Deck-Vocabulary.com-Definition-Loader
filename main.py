@@ -52,16 +52,16 @@ while again:
         lastIndex = words.index('Play the Challenge')
         words = words[21: lastIndex]
         length = len(words)
-        list = [['', '', ''] for i in range(length)]
+        word_list = [['', '', ''] for i in range(length)]
         for i in range(length):
-            list[i][0:2] = words[i].split('\n')[1:3]
-            list[i][2] = ''.join(words[i].split('\n')[4:6])
+            word_list[i][0:2] = words[i].split('\n')[1:3]
+            word_list[i][2] = ''.join(words[i].split('\n')[4:6])
 
         my_model = anki_deck_model.get_card_model()
 
         my_deck = genanki.Deck(2059400110, title)
 
-        for i in list:
+        for i in word_list:
             my_deck.add_note(genanki.Note(
                 model=my_model,
                 fields=i))
