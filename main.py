@@ -3,6 +3,7 @@ import bs4
 import genanki
 import re
 import anki_deck_model
+import text_to_speech
 '''
 Beautiful Soup is a Python library for pulling data out of HTML and XML files. 
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
@@ -24,7 +25,8 @@ while again:
     isGoodUrl = False
     while not isGoodUrl:
         url = input("Input list URL: ")
-        url = "http://vocabulary.com/lists/236361"  # fixed url for testing
+#       url = "http://vocabulary.com/lists/236361"  # fixed url for testing
+        url = "https://www.vocabulary.com/lists/7915913"
         url = url.strip()
         pattern = re.compile(
             '(https?://)?(www\\.)?vocabulary\\.com/lists/\\d{4,8}')
@@ -57,6 +59,9 @@ while again:
         for i in range(length):
             word_list[i][0:2] = words[i].split('\n')[1:3]
             word_list[i][2] = ''.join(words[i].split('\n')[4:6])
+
+        for w in word_list:
+            text_to_speech.get_audio(w[0])
 
         my_model = anki_deck_model.get_card_model_2()
 
