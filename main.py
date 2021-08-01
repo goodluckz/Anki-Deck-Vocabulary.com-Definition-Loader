@@ -45,6 +45,7 @@ while again:
         soup = bs4.BeautifulSoup(response.text, "html.parser")
         title = soup.select('title')[0].text
         title = title.replace(" : Vocabulary.com", "")  # remove suffix
+        title = title.replace(" - Vocabulary List", "")
         print('Title of list: ' + title)
         for i, li in enumerate(soup.select('li')):
             words.append(li.text)
@@ -68,8 +69,9 @@ while again:
 
         for pack in word_list:
             word, definition, sentence = pack
-            syn, ant, pos, trans, source, pic, audio = "synonym", "antonym", "pos", "trans", "source", "pic", "audio"
-
+            syn, ant, pos, trans, pic = "", "", "", "", ""
+            source = ""
+            audio = ""
             my_deck.add_note(genanki.Note(
                 model=my_model,
                 fields=[word, definition, sentence, syn, ant, pos, trans, source, pic, audio]))
