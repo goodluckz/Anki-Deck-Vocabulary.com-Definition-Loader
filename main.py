@@ -13,9 +13,11 @@ https://github.com/kerrickstaley/genanki
 
 
 again = True
-txt = "Welcome, to create an Anki Vocabulary deck please select a deck from vocabulary.com"\
-      "\nGo to the page that contains the vocab list and copy the URL of that page."\
+txt = "Welcome, to create an Anki Vocabulary deck please select a deck from "\
+    "vocabulary.com\nGo to the page that contains the vocab list and copy the"\
+    " URL of that page."\
     "\nIt should look like this http://vocabulary.com/lists/236361"
+    
 print(txt)
 
 while again:
@@ -24,14 +26,15 @@ while again:
         url = input("Input list URL: ")
         # url = "http://vocabulary.com/lists/236361"  # fixed url for testing
         url = url.strip()
-        pattern = re.compile('(https?://)?(www\\.)?vocabulary\\.com/lists/\\d{4,8}')
+        pattern = re.compile(
+            '(https?://)?(www\\.)?vocabulary\\.com/lists/\\d{4,8}')
         match = re.match(pattern, url)
         boolean = bool(match)
         if boolean:
             print("Is valid URL")
         isGoodUrl = boolean
 
-    if not 'http' in url:
+    if 'http' not in url:
         url = 'http://' + url
 
     response = requests.get(url)
@@ -49,12 +52,10 @@ while again:
         lastIndex = words.index('Play the Challenge')
         words = words[21: lastIndex]
         length = len(words)
-        list = [['','',''] for i in range(length)]
+        list = [['', '', ''] for i in range(length)]
         for i in range(length):
             list[i][0:2] = words[i].split('\n')[1:3]
             list[i][2] = ''.join(words[i].split('\n')[4:6])
-
-
 
         my_model = anki_deck_model.get_card_model()
 
@@ -80,5 +81,3 @@ while again:
         again = False
 
     print("\n\n###########################\n\n")
-
-
