@@ -2,6 +2,14 @@ import requests
 import bs4
 import genanki
 import re
+'''
+Beautiful Soup is a Python library for pulling data out of HTML and XML files. 
+https://www.crummy.com/software/BeautifulSoup/bs4/doc/
+
+genanki allows you to programatically generate decks in Python 3 for Anki.
+https://github.com/kerrickstaley/genanki
+'''
+
 
 again = True
 txt = "Welcome, to create an Anki Vocabulary deck please select a deck from vocabulary.com"\
@@ -14,6 +22,7 @@ while again:
     while not isGoodUrl:
         url = input("Input list URL: ")
         # url = "http://vocabulary.com/lists/236361"  # fixed url for testing
+        url = url.strip()
         pattern = re.compile('(https?://)?(www\\.)?vocabulary\\.com/lists/\\d{4,8}')
         match = re.match(pattern, url)
         boolean = bool(match)
