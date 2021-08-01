@@ -83,7 +83,7 @@ while again:
         genanki.Package(my_deck).write_to_file(title+'.apkg')
         print("Deck has been created!")
 
-    answer = input("Do you want to create another deck? y/n ").lower()
+    answer = input("Do you want to create another deck? [y/N] ").lower()
     if answer != "y" and answer != "yes":
         again = False
 
