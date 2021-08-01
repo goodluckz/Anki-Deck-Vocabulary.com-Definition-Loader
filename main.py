@@ -73,6 +73,7 @@ while again:
         my_deck = genanki.Deck(2059400110, title)
 
         for pack in word_list:
+            # todo include a link to cambridge dictionary https://dictionary.cambridge.org/us/dictionary/english/tedious
             word, definition, sentence = pack
             syn, ant, pos, trans, pic = "", "", "", "", ""
             source = title
