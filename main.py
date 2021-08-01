@@ -2,6 +2,7 @@ import requests
 import bs4
 import genanki
 import re
+import anki_deck_model
 '''
 Beautiful Soup is a Python library for pulling data out of HTML and XML files. 
 https://www.crummy.com/software/BeautifulSoup/bs4/doc/
@@ -55,21 +56,7 @@ while again:
 
 
 
-        my_model = genanki.Model(
-          1607392319,
-          'Simple Model',
-          fields=[
-            {'name': 'Term'},
-            {'name': 'definition'},
-            {'name': 'Example'},
-          ],
-          templates=[
-            {
-              'name': 'Card 1',
-              'qfmt': '{{Term}}',
-              'afmt': '{{FrontSide}}<hr id="answer">{{definition}}<br><br>{{Example}}',
-            },
-          ])
+        my_model = anki_deck_model.get_card_model()
 
         my_deck = genanki.Deck(2059400110, title)
 
