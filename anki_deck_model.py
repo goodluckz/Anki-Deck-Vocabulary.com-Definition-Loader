@@ -20,6 +20,12 @@ def get_card_model():
 
 
 def get_card_model_2():
+    with open("style/front.html") as f:
+        front = f.read()
+
+    with open("style/back.html") as f:
+        back = f.read()
+
     return genanki.Model(
         1607392319,
         'Simple Model',
@@ -38,34 +44,8 @@ def get_card_model_2():
         templates=[
             {
                 'name': 'Card 1',
-                'qfmt': '<div class="header">\n'
-                '<span class="word">{{Word}}</span>\n'
-                '</div>\n'
-                
-                '<div class="header">\n'
-                '<span class="transcription">{{Transcription}}</span>\n'
-                '<span class="part-of-speech">{{Part of Speech}}</span>\n'
-                '</div>\n'
-                '<span class="audio">{{Audio}}</span>\n',
+                'qfmt': front,
 
-                'afmt': '{{FrontSide}}\n'
-                
-                '<hr id="answer">\n'
-                '<div class="sub-header">\n'
-                '<span class="definition">{{Definition}}</span>\n'
-                '</div>\n'                
-                '{{#Synonym}}\n'
-                '<div class="sub-header">\n'
-                '<span class="synonym"><b>Synonym</b> {{Synonym}}</span>\n'
-                '</div>\n'
-                '{{/Synonym}}\n'
-                '{{#Antonym}}\n'
-                '<div class="sub-header">\n'
-                '<span class="antonym"><b>Antonym:</b> {{Antonym}}</span>\n'
-                '</div>\n'                
-                '{{/Antonym}}\n'
-                '<div class="sentence">{{Sentence}}</div>\n'
-                '<div class="source">{{Source}}</div>\n'
-                '<div class="picture">{{Picture}}</div>\n',
+                'afmt': back,
             },
         ])

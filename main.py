@@ -59,6 +59,11 @@ while again:
 
         my_model = anki_deck_model.get_card_model_2()
 
+        with open("style/style.css") as f:
+            css = f.read()
+
+        my_model.css = css
+
         my_deck = genanki.Deck(2059400110, title)
 
         for pack in word_list:

@@ -1,0 +1,80 @@
+.card {
+    font-family: arial;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
+.word {
+    color: #ffe600;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
+.transcription {
+    color: #72f542;
+    font-family: Calibri;
+    margin-left: 4px;
+}
+
+.part-of-speech {
+    font-family: Calibri;
+    font-style: italic;
+    color: #9c938e
+}
+
+.sub-header {
+    margin-top: 8px;
+}
+
+.sentence {
+    font-family: Calibri, sans-serif;
+    font-size: 19px;
+    margin-top: 12px;
+    color: #96e8ff
+}
+
+.source {
+    font-family: times-new;
+    text-align: right;
+    font-size: 17px;
+    margin-top: 1.0em;
+    margin-right: 0.5em;
+    color: #fa0a0a;
+}
+
+.definition {
+    font-size: 30px;
+    font-family: times-new;
+}
+
+.picture {
+    margin-top: 16px;
+}
+
+.synonym {
+    color: #0afa72;
+    font-size: 20px;
+}
+
+.antonym {
+    color: #fa0c67;
+    font-size: 20px;
+}
+
+.picture img {
+    max-height: 240px;
+}
+
+.replaybutton span {
+    content: url("_font-awesome_volume-up.png");
+    width: 24px;
+}
+
+/*Start of style added by resize image add-on. Don't edit directly or the edition will be lost. Edit via the add-on configuration */
+.mobile .card img {
+    height: unset !important;
+    width: unset !important;
+}
+
+/*End of style added by resize image add-on*/
