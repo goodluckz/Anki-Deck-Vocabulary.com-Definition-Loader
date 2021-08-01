@@ -82,6 +82,8 @@ while again:
         title = title.replace("'", "")
         title = title.replace("-", "")
         title = title.replace(":", "")
+        title = title.replace('"', "")
+        title = title.replace(",", "")
 
         genanki.Package(my_deck).write_to_file(title+'.apkg')
         print("Deck has been created!")
