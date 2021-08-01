@@ -76,7 +76,7 @@ while again:
             word, definition, sentence = pack
             syn, ant, pos, trans, pic = "", "", "", "", ""
             source = title
-            audio = ""
+            audio = "[sound:"+ word +".mp3]"
             my_deck.add_note(genanki.Note(
                 model=my_model,
                 fields=[word, definition, sentence, syn, ant, pos, trans, source, pic, audio]))
@@ -85,7 +85,9 @@ while again:
         for d in dirt:
             title = title.replace(d, "")
 
-        genanki.Package(my_deck).write_to_file(title+'.apkg')
+        package = genanki.Package(my_deck)
+        package.media_files = [r".\sound\\" + w[0] + ".mp3" for w in word_list]
+        package.write_to_file(title + '.apkg')
         print("Deck has been created!")
 
     answer = input("Do you want to create another deck? [y/N] ").lower()
