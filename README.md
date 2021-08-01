@@ -20,12 +20,14 @@ This is a a console program which i wrote in python. It can automatically create
 1. You need to manually change the template and deck name
 2. Sometimes if the list have more than 100 words, it can only load the first 100 words, i dont know how to solve this yet...
 
-<img src="https://img.icons8.com/wired/64/26e07f/dictionary.png"/>
+<img src="https://img.icons8.com/wired/64/26e07f/dictionary.png" height="50"/>
 <a href="https://icons8.com/icon/54640/dictionary">Green Dictionary icon by Icons8</a><br/>
-<img src="https://img.icons8.com/wired/64/4a90e2/dictionary.png"/>
+<img src="https://img.icons8.com/wired/64/4a90e2/dictionary.png" height="50"/>
 <a href="https://icons8.com/icon/54640/dictionary">Blue Dictionary icon by Icons8</a><br/>
 <img src="https://img.icons8.com/wired/64/000000/swap.png" height="50"/>
-<a href="https://icons8.com/icon/74155/swap">Swap icon by Icons8</a>
+<a href="https://icons8.com/icon/74155/swap">Swap icon by Icons8</a><br/>
+<img src="https://img.icons8.com/carbon-copy/100/fa314a/image.png" height="50"/>
+<a href="https://icons8.com/icon/N3wRcSUFuct_/image">Image icon by Icons8</a>
 
 ## How does this work
 
