@@ -77,10 +77,11 @@ while again:
             syn, ant, pos, trans, pic = "", "", "", "", ""
             source = title
             audio = "[sound:" + word + ".mp3]"
+            word = f'<a href="https://www.vocabulary.com/dictionary/' + word + '">' + word.upper() + f'</a>'
 
             my_deck.add_note(genanki.Note(
                 model=my_model,
-                fields=[word.upper(), definition, sentence, syn, ant, pos, trans, source, pic, audio]))
+                fields=[word, definition, sentence, syn, ant, pos, trans, source, pic, audio]))
                 
         dirt = ["Vocabulary List", " ", "'", "-", ":", '"', ","]
         for d in dirt:
