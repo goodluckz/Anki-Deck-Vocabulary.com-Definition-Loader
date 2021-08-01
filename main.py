@@ -26,7 +26,7 @@ while again:
     while not isGoodUrl:
         url = input("Input list URL: ")
 #       url = "http://vocabulary.com/lists/236361"  # fixed url for testing
-        url = "https://www.vocabulary.com/lists/7915913"
+
         url = url.strip()
         pattern = re.compile(
             '(https?://)?(www\\.)?vocabulary\\.com/lists/\\d{4,8}')
