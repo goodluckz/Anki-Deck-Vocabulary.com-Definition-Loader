@@ -24,7 +24,7 @@ while again:
     isGoodUrl = False
     while not isGoodUrl:
         url = input("Input list URL: ")
-        # url = "http://vocabulary.com/lists/236361"  # fixed url for testing
+        url = "http://vocabulary.com/lists/236361"  # fixed url for testing
         url = url.strip()
         pattern = re.compile(
             '(https?://)?(www\\.)?vocabulary\\.com/lists/\\d{4,8}')
@@ -65,13 +65,10 @@ while again:
             my_deck.add_note(genanki.Note(
                 model=my_model,
                 fields=i))
-        title = title.replace("Vocabulary List", "")
-        title = title.replace(" ", "")
-        title = title.replace("'", "")
-        title = title.replace("-", "")
-        title = title.replace(":", "")
-        title = title.replace('"', "")
-        title = title.replace(",", "")
+                
+        dirt = ["Vocabulary List", " ", "'", "-", ":", '"', ","]
+        for d in dirt:
+            title = title.replace(d, "")
 
         genanki.Package(my_deck).write_to_file(title+'.apkg')
         print("Deck has been created!")
