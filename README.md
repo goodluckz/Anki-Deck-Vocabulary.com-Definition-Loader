@@ -23,7 +23,8 @@ This is a a console program which i wrote in python. It can automatically create
 <img src="https://img.icons8.com/wired/64/26e07f/dictionary.png"/>
 <a href="https://icons8.com/icon/54640/dictionary">Green Dictionary icon by Icons8</a><br/>
 <img src="https://img.icons8.com/wired/64/4a90e2/dictionary.png"/>
-<a href="https://icons8.com/icon/54640/dictionary">Blue Dictionary icon by Icons8</a>
+<a href="https://icons8.com/icon/54640/dictionary">Blue Dictionary icon by Icons8</a><br/>
+
 ## How does this work
 
 This programm is fairly simple: first it scrap the word, definition and example from the url you entered, and put it into a 2 by 3 list. then it feeds the list to genanki. that's it. 
@@ -33,3 +34,6 @@ ___
 Any question or comments are welcome
 
 Good luck!
+
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/ChrisNiekler)
