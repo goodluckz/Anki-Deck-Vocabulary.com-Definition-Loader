@@ -4,19 +4,20 @@ import genanki
 def get_card_model():
     return genanki.Model(
         1607392319,
-        'Simple Model',
+        "Simple Model",
         fields=[
-            {'name': 'Term'},
-            {'name': 'definition'},
-            {'name': 'Example'},
+            {"name": "Term"},
+            {"name": "definition"},
+            {"name": "Example"},
         ],
         templates=[
             {
-                'name': 'Card 1',
-                'qfmt': '{{Term}}',
-                'afmt': '{{FrontSide}}<hr id="answer">{{definition}}<br><br>{{Example}}',
+                "name": "Card 1",
+                "qfmt": "{{Term}}",
+                "afmt": '{{FrontSide}}<hr id="answer">{{definition}}<br><br>{{Example}}',
             },
-        ])
+        ],
+    )
 
 
 def get_card_model_2():
@@ -27,25 +28,18 @@ def get_card_model_2():
         back = f.read()
 
     return genanki.Model(
-        1607392319,
-        'Simple Model',
+        1607392300,
+        "Simple Model",
         fields=[
-            {'name': 'Word'},
-            {'name': 'Definition'},
-            {'name': 'Sentence'},
-            {'name': 'Synonym'},
-            {'name': 'Antonym'},
-            {'name': 'Part of Speech'},
-            {'name': 'Transcription'},
-            {'name': 'Source'},
-            {'name': 'Picture'},
-            {'name': 'Audio'}
+            {"name": "Word"},
+            {"name": "Definition"},
+            {"name": "Example"},
         ],
         templates=[
             {
-                'name': 'Card 1',
-                'qfmt': front,
-
-                'afmt': back,
+                "name": "Card 1",
+                "qfmt": front,
+                "afmt": back,
             },
-        ])
+        ],
+    )
