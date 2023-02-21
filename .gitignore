@@ -131,3 +131,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+word_dic.txt
+word_meaning.txt
+wordlist.txt
